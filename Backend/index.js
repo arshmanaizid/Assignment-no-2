@@ -12,7 +12,6 @@ const StudentModel = require('./models/Student1');
 const AttendanceModel = require('./models/Attendance2');
 app.use(express.json());
 app.use(cors({ origin: ["http://localhost:3000","https://attendancemonitoringsyst-b1ae8.web.app", "https://mern-attendance-app.onrender.com"] }));
-// mongodb+srv://gurucharan:Premguru125@cluster.t9bqdyu.mongodb.net/food?retryWrites=true&w=majority
 mongoose.connect('mongodb+srv://NSSUser1:NSSUser123@nss.vncxd.mongodb.net/volunteer?retryWrites=true&w=majority', {
     useNewUrlParser: true,
 });
@@ -32,7 +31,7 @@ app.post('/form/insert', async (req, res) => {
         Mobile_number,
         Email_id
     } = req.body;
-
+  
     const student = new StudentModel({
         Name,
         Register_number,
